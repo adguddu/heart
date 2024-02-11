@@ -1,0 +1,59 @@
+<!-- Tutorial Link: https://youtu.be/AA4sorTdICI?si=KqUhLImkxCQayVv0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgb(17, 23, 39);
+        }
+        .heart{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            margin: 300px auto;
+            position: relative;
+            transform: rotate(45deg);
+            /* animation: move 1.5s ease-in-out infinite; */
+            animation: beat 0.5s ease-in-out infinite;
+        }
+        .heart::after,
+        .heart::before{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            border-radius: 50%;
+        }
+        .heart::after{
+            top: -50%;
+        }
+        .heart::before{
+            left: -50%;
+        }
+        /* @keyframes move{
+            0%{
+                transform: rotate(45deg) translateY(0px);
+            }
+            50%{
+                transform: rotate(45deg) translateY(15px);
+            }
+            100%{
+                transform: rotate(45deg) translateY(0px);
+            }
+        } */
+        @keyframes beat{
+            50%{
+                scale: 1.1;
+                /* scale: 1.2; */
+            }
+        }
+    </style>
+    <title>Heart Beat</title>
+</head>
+<body>
+    <div class="heart"></div>
+</body>
+</html>
